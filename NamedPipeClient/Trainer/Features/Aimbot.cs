@@ -10,7 +10,7 @@ namespace mrBump.Trainer.Features
             Vector3 enemyAimScreenPos = GameUtils.StandardizeYPos(camera.WorldToScreenPoint(enemy.AimPosition));
             float distanceToMiddleScreen = Vector2.Distance(enemyAimScreenPos, MiddleScreenPos());
 
-            if (distanceToMiddleScreen < NearestDistance)
+            if (distanceToMiddleScreen < NearestDistance && enemy.IsVisible)
             {
                 IsFound = true;
                 NearestDistance = distanceToMiddleScreen;
@@ -34,7 +34,7 @@ namespace mrBump.Trainer.Features
                 {
                     Transform cameraHolder = playerCamera.TransformCameraHolder;
 
-                    if (Input.GetMouseButton(0) && IsFound && NearestEnemy.IsVisible)
+                    if (Input.GetMouseButton(0) && IsFound)
                     {
                         cameraHolder.LookAt(NearestEnemy.AimPosition);
                     }

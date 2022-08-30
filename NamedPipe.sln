@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32804.467
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PipeServer", "NamedPipeServer\NamedPipeServer.vcxproj", "{4AE5AF76-FD7E-456A-AF43-77B134683C9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "The Walking Zombie 2", "NamedPipeClient\The Walking Zombie 2.csproj", "{A4CE1C74-89F6-4E60-9267-F9DAD1A0513D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4AE5AF76-FD7E-456A-AF43-77B134683C9C}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{4AE5AF76-FD7E-456A-AF43-77B134683C9C}.Debug|Any CPU.Build.0 = Debug|x64
+		{4AE5AF76-FD7E-456A-AF43-77B134683C9C}.Debug|x64.ActiveCfg = Debug|x64
+		{4AE5AF76-FD7E-456A-AF43-77B134683C9C}.Debug|x64.Build.0 = Debug|x64
+		{4AE5AF76-FD7E-456A-AF43-77B134683C9C}.Debug|x86.ActiveCfg = Debug|Win32
+		{4AE5AF76-FD7E-456A-AF43-77B134683C9C}.Debug|x86.Build.0 = Debug|Win32
+		{4AE5AF76-FD7E-456A-AF43-77B134683C9C}.Release|Any CPU.ActiveCfg = Release|x64
+		{4AE5AF76-FD7E-456A-AF43-77B134683C9C}.Release|Any CPU.Build.0 = Release|x64
+		{4AE5AF76-FD7E-456A-AF43-77B134683C9C}.Release|x64.ActiveCfg = Release|x64
+		{4AE5AF76-FD7E-456A-AF43-77B134683C9C}.Release|x64.Build.0 = Release|x64
+		{4AE5AF76-FD7E-456A-AF43-77B134683C9C}.Release|x86.ActiveCfg = Release|Win32
+		{4AE5AF76-FD7E-456A-AF43-77B134683C9C}.Release|x86.Build.0 = Release|Win32
+		{A4CE1C74-89F6-4E60-9267-F9DAD1A0513D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4CE1C74-89F6-4E60-9267-F9DAD1A0513D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4CE1C74-89F6-4E60-9267-F9DAD1A0513D}.Debug|x64.ActiveCfg = Release|x64
+		{A4CE1C74-89F6-4E60-9267-F9DAD1A0513D}.Debug|x64.Build.0 = Release|x64
+		{A4CE1C74-89F6-4E60-9267-F9DAD1A0513D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A4CE1C74-89F6-4E60-9267-F9DAD1A0513D}.Debug|x86.Build.0 = Debug|Any CPU
+		{A4CE1C74-89F6-4E60-9267-F9DAD1A0513D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4CE1C74-89F6-4E60-9267-F9DAD1A0513D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4CE1C74-89F6-4E60-9267-F9DAD1A0513D}.Release|x64.ActiveCfg = Release|x64
+		{A4CE1C74-89F6-4E60-9267-F9DAD1A0513D}.Release|x64.Build.0 = Release|x64
+		{A4CE1C74-89F6-4E60-9267-F9DAD1A0513D}.Release|x86.ActiveCfg = Release|Any CPU
+		{A4CE1C74-89F6-4E60-9267-F9DAD1A0513D}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FA6BB43C-E7F4-4782-8405-93E6CCD98CB8}
+	EndGlobalSection
+EndGlobal

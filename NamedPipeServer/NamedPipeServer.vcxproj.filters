@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="ImGui\backends\imgui_impl_dx11.cpp">
+      <Filter>ImGui\Backends</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\backends\imgui_impl_win32.cpp">
+      <Filter>ImGui\Backends</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\custom\custom_widgets.cpp">
+      <Filter>ImGui\Customs</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\custom\imgui_info_center.cpp">
+      <Filter>ImGui\Customs</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\Render\Render.cpp">
+      <Filter>ImGui\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\imgui.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\imgui_demo.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\imgui_draw.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\imgui_tables.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\imgui_widgets.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\utils\imgui_utils.cpp">
+      <Filter>ImGui\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="PipeServer\PipeServer.cpp">
+      <Filter>NamedPipeServer</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\Utils.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="OverlayManager\Overlay.cpp">
+      <Filter>OverlayManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu\Menu.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu\Input.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="Configuration\ConfigManager.cpp">
+      <Filter>Configuration</Filter>
+    </ClCompile>
+    <ClCompile Include="Configuration\Configs.cpp">
+      <Filter>Configuration</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="PipeServer\PipeServerBase.cpp">
+      <Filter>NamedPipeServer</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ImGui\backends\imgui_impl_dx11.h">
+      <Filter>ImGui\Backends</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\backends\imgui_impl_win32.h">
+      <Filter>ImGui\Backends</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\custom\custom_widgets.h">
+      <Filter>ImGui\Customs</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\custom\imgui_info_center.h">
+      <Filter>ImGui\Customs</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\fonts\font_awesome_5.h">
+      <Filter>ImGui\Fonts</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\fonts\fa_solid_900.h">
+      <Filter>ImGui\Fonts</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\Render\Render.h">
+      <Filter>ImGui\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imgui.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imgui_internal.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imstb_rectpack.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imstb_textedit.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imstb_truetype.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\utils\imgui_utils.h">
+      <Filter>ImGui\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imconfig.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\stb_image.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="PipeServer\PipeServer.h">
+      <Filter>NamedPipeServer</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\Utils.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu\Menu.h">
+      <Filter>Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu\Input.h">
+      <Filter>Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="OverlayManager\Overlay.h">
+      <Filter>OverlayManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Configuration\ConfigManager.h">
+      <Filter>Configuration</Filter>
+    </ClInclude>
+    <ClInclude Include="Configuration\Configs.h">
+      <Filter>Configuration</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="PipeServer\PipeServerBase.h">
+      <Filter>NamedPipeServer</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="ImGui">
+      <UniqueIdentifier>{283deb98-d3ba-4b9e-aa91-399a324ec0b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ImGui\Backends">
+      <UniqueIdentifier>{c42bbe45-9d0e-42d1-8658-bf9bdce7def3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ImGui\Customs">
+      <UniqueIdentifier>{1581ddad-1a4d-42a9-a778-48304205d333}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ImGui\Fonts">
+      <UniqueIdentifier>{f1c5799a-467b-400e-a94e-febeb793dada}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ImGui\Render">
+      <UniqueIdentifier>{ecabbe03-15fd-49cc-8ee1-18c39a212419}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ImGui\Utils">
+      <UniqueIdentifier>{7167e24d-5daf-4489-bcb9-5442de08d9f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{61bfcb21-0ca3-42ca-9385-d9571b2078f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OverlayManager">
+      <UniqueIdentifier>{04dc7da4-2ec0-4e1e-a44d-4b8060fa9760}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Menu">
+      <UniqueIdentifier>{0850c4b4-1e49-4b85-9b82-8fe2f32d3c50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Configuration">
+      <UniqueIdentifier>{cf4316a1-4ae1-4dd0-9159-ed1999c82fd7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main">
+      <UniqueIdentifier>{f1f58dc3-efaa-43f7-b1bd-5fea9fec5a40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NamedPipeServer">
+      <UniqueIdentifier>{f08615d2-de1f-4079-a51b-c82f9e20aa8c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

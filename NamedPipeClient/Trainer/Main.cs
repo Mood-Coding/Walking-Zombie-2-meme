@@ -62,13 +62,14 @@ namespace mrBump.Trainer
 
             foreach (Game.DataType.Enemy enemy in Game.Data.Enemies)
             {
+                Features.Chams.ApplyChams(enemy);
+
                 Features.Aimbot.FindNearestEnemy(Game.Data.MainCamera, enemy);
 
-                Features.Chams.ApplyChams(enemy);
                 Features.Esp.DrawEnemyEsp(enemy);
 
                 // TODO visible check on chams
-                 Render.DrawString(GameUtils.StandardizeYPos(Camera.main.WorldToScreenPoint(enemy.AimPosition)), enemy.IsVisible ? "visible" : "hide");
+                 //Render.DrawString(GameUtils.StandardizeYPos(Camera.main.WorldToScreenPoint(enemy.AimPosition)), enemy.IsVisible ? "visible" : "hide");
             }
 
             Features.Aimbot.Aim(Game.Data.MainCamera);

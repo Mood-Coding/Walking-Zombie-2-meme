@@ -39,7 +39,7 @@ void Menu::Draw() const
 		g_PipeServer.SendConfig("esp_health", std::to_string(Configs::Esp::Health).c_str());
 	}
 
-	if (ImGui::Checkbox("Chams", &Configs::Esp::Chams))
+	if (ImGui::Checkbox("Chams (Buggy)", &Configs::Esp::Chams))
 	{
 		g_ConfigManager.Set("esp_chams", Configs::Esp::Chams, true);
 		g_PipeServer.SendConfig("esp_chams", std::to_string(Configs::Esp::Chams).c_str());

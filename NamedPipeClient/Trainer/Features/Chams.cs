@@ -32,36 +32,28 @@ namespace mrBump.Trainer.Features
 
         public static void ApplyChams(Game.DataType.Enemy enemy)
         {
-            int id = enemy.GameObj.GetInstanceID();
-
-            Renderer[] renderers = enemy.GameObj.GetComponentsInChildren<Renderer>();
-            if (renderers is null) { return; }
-
-            // Cache Renderer's original material if not cached
-            if (!DefaultRendererMaterial.ContainsKey(id))
-            {
-                // Both renderers[0] and renderers[1] have the same material
-                DefaultRendererMaterial.Add(id, renderers[0].material);
-            }
-
-            // Cache Chams toggle state if not cached
-            if (!ChamsToggleState.ContainsKey(id))
-            {
-                ChamsToggleState.Add(id, null);
-            }
-
-            // Skip already applied Chams enemy
-            if (ChamsToggleState[id] == Configuration.Esp.Chams)
+            if (!Configuration.Esp.Chams)
             {
                 return;
             }
-            else
+
+            // Prepare
+            Renderer[] renderers = enemy.GameObj.GetComponentsInChildren<Renderer>();
+            if (renderers is null) { return; }
+
+            Material material;
+
+            // Renderer material based on Config Chams toggle state
+            ChamsMaterial.SetColor("_Color", enemy.IsVisible ? new Color(255, 0, 0, 255) : new Color(255, 255, 255, 255));
+            material = ChamsMaterial;
+
+            // Both renderers[0] and renderers[1] have the same material, here we use renderers[0] to check
+            if (renderers[0].material.color == ChamsMaterial.color)
             {
-                ChamsToggleState[id] = Configuration.Esp.Chams;
+                return;
             }
 
-            // Apply renderer material based on Config Chams toggle state
-            Material material = Configuration.Esp.Chams ? ChamsMaterial : DefaultRendererMaterial[id];
+            // Apply Chams
             foreach (Renderer render in renderers)
             {
                 render.material = material;
@@ -77,7 +69,5 @@ namespace mrBump.Trainer.Features
         {
             hideFlags = HideFlags.DontSaveInEditor | HideFlags.HideInHierarchy,
         };
-        private static readonly Dictionary<int, bool?> ChamsToggleState = new Dictionary<int, bool?>();
-        private static readonly Dictionary<int, Material> DefaultRendererMaterial = new Dictionary<int, Material>();
     }
 }

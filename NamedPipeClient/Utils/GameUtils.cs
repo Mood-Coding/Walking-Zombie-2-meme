@@ -55,6 +55,11 @@ namespace mrBump
         // GameObject data
         public static Vector3 GetObjectScreenPos(Camera main_camera, GameObject clone_enemy)
         {
+            if (main_camera is null)
+            {
+                return Vector3.zero;
+            }
+
             Vector3 screenPos = main_camera.WorldToScreenPoint(clone_enemy.transform.position);
             screenPos.y = StandardizeYPos(screenPos.y);
 

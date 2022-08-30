@@ -27,18 +27,13 @@ namespace mrBump.Trainer.Features
                 // Line to Found Enemy
                 Render.DrawLine(GameUtils.StandardizeYPos(camera.WorldToScreenPoint(NearestEnemy.AimPosition)), MiddleScreenPos(), 1);
 
-                //Debug.Log("aim.... " + (aimVector).ToString());
-
-                CFirstPersonCamera playerCamera = Object.FindObjectOfType<CFirstPersonCamera>();
-                if (playerCamera != null)
+                if (Input.GetMouseButton(0))
                 {
-                    Transform cameraHolder = playerCamera.TransformCameraHolder;
-
-                    if (Input.GetMouseButton(0) && IsFound)
+                    CFirstPersonCamera playerCamera = Object.FindObjectOfType<CFirstPersonCamera>();
+                    if (playerCamera != null)
                     {
-                        cameraHolder.LookAt(NearestEnemy.AimPosition);
+                        playerCamera.TransformCameraHolder.LookAt(NearestEnemy.AimPosition);
                     }
-                    //Debug.Log("current " + cameraHolder.forward);
                 }
 
                 ResetNearestEnemy();

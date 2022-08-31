@@ -72,13 +72,30 @@ namespace mrBump.Trainer.Features.Patches
             return !Configuration.Patches.NoMuzzelFlash;
         }
 
+        //[HarmonyPrefix]
+        //[HarmonyPatch(typeof(CFpsWeaponSpreadModificator), nameof(CFpsWeaponSpreadModificator.OnAttack))]
+        //static bool NoSpread()
+        //{
+        //    // return true = Allow execution of AddText method 
+        //    // return false = Skip execution of AddText method
+        //    return !Configuration.Patches.NoSpread;
+        //}
+
         [HarmonyPrefix]
-        [HarmonyPatch(typeof(CFpsWeaponSpreadModificator), nameof(CFpsWeaponSpreadModificator.OnAttack))]
-        static bool NoSpread()
+        [HarmonyPatch(typeof(CFpsWeaponSpreadModificator), nameof(CFpsWeaponSpreadModificator.ActualSpread), MethodType.Getter)]
+        static bool NoSpread2(ref float __result)
         {
-            // return true = Allow execution of AddText method 
-            // return false = Skip execution of AddText method
-            return !Configuration.Patches.NoSpread;
+            if (Configuration.Patches.NoSpread)
+            {
+                __result = 0.0f;
+                // Skip execution of get_IsInfinityAmmoStock method
+                return false;
+            }
+            else
+            {
+                // Allow execution of get_IsInfinityAmmoStock method 
+                return true;
+            }
         }
 
         [HarmonyPrefix]

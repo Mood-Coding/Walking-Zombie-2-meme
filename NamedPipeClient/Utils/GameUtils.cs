@@ -189,10 +189,11 @@ namespace mrBump
         public static bool IsVisible(Camera camera, Vector3 destination_pos)
         {
             var dir = destination_pos - camera.transform.position;
-            if (Physics.Raycast(camera.transform.position, dir.normalized, out RaycastHit raycast, float.PositiveInfinity, Physics.AllLayers))
+            if (Physics.Raycast(camera.transform.position, dir.normalized, out RaycastHit raycast, float.PositiveInfinity))
             {
                 if (raycast.transform.name.Contains("E-")
-                    || raycast.transform.name == "HeadAffinity")
+                    || raycast.transform.name == "HeadAffinity"
+                    || raycast.transform.name.Contains(" Head"))
                 {
                     return true;
                 }
